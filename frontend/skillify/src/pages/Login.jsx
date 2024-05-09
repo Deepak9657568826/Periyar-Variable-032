@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import "../styles/loginpage.css"
-
+import { FcGoogle } from "react-icons/fc";
 function Login() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -9,7 +9,10 @@ function Login() {
   const handleLogin = () => {
     // Logic to handle login
   };
-
+  const loginwithgoogle = ()=>{
+    window.open("http://localhost:6003/auth/google/callback","_self")
+    
+}
   return (
     <div className="loginpage flex justify-center items-center h-screen">
 
@@ -61,6 +64,15 @@ function Login() {
               onClick={handleLogin}
             >
               Submit
+            </button>
+          </div>
+          <div className="flex items-center justify-between">
+            <button
+           
+             type="button"
+              onClick={loginwithgoogle}
+            >
+           <FcGoogle style={{fontSize:"40px"}}/>
             </button>
           </div>
         </form>
