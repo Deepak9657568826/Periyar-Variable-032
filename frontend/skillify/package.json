@@ -10,18 +10,16 @@
     "preview": "vite preview"
   },
   "dependencies": {
-<<<<<<< HEAD
+
     "@chakra-ui/icons": "^2.1.1",
-=======
->>>>>>> fd5290d6a3ea8063b42e22fb8d2d67fba419805f
+
     "@chakra-ui/react": "^2.8.2",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
     "axios": "^1.6.8",
-<<<<<<< HEAD
+
     "emailjs-com": "^3.2.0",
-=======
->>>>>>> fd5290d6a3ea8063b42e22fb8d2d67fba419805f
+
     "framer-motion": "^11.1.9",
     "react": "^18.2.0",
     "react-bootstrap": "^2.10.2",
