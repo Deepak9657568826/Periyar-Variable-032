@@ -61,26 +61,26 @@ function ContactUS() {
     <section id="contact">
       <div className="contact-box">
         <div className="contact-links">
-          <h2>CONTACT</h2>
+          <h2 className='contact-heading'>CONTACT US</h2>
           <div className="links">
             <div className="link">
               <a href="https://www.linkedin.com/in/aditi-dhiman008/" target="_blank" rel="noreferrer">
-                <img src="https://i.postimg.cc/m2mg2Hjm/linkedin.png" alt="linkedin" />
+                <img className='social-icon' src="https://i.postimg.cc/m2mg2Hjm/linkedin.png" alt="linkedin" />
               </a>
             </div>
             <div className="link">
               <a href="https://github.com/itiaditi" target="_blank" rel="noreferrer">
-                <img src="https://i.postimg.cc/YCV2QBJg/github.png" alt="github" />
+                <img className='social-icon' src="https://i.postimg.cc/YCV2QBJg/github.png" alt="github" />
               </a>
             </div>
             <div className="link">
               <a href="https://codepen.io/" target="_blank" rel="noreferrer">
-                <img src="https://i.postimg.cc/W4Znvrry/codepen.png" alt="codepen" />
+                <img className='social-icon' src="https://i.postimg.cc/W4Znvrry/codepen.png" alt="codepen" />
               </a>
             </div>
             <div className="link">
               <a href="mailto:aditi.tlgt244@gmail.com">
-                <img src="https://i.postimg.cc/NjLfyjPB/email.png" alt="email" />
+                <img className='social-icon' src="https://i.postimg.cc/NjLfyjPB/email.png" alt="email" />
               </a>
             </div>
           </div>

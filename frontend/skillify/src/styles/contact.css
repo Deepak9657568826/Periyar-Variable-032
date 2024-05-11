@@ -74,7 +74,7 @@
   }
 }
 
-h2 {
+.contact-heading {
   font-family: 'Arimo', sans-serif;
   color: #fff;
   font-size: clamp(30px, 6vw, 60px);
@@ -95,7 +95,7 @@ h2 {
   cursor: pointer;
 }
 
-img {
+.social-icon {
   width: 45px;
   height: 45px;
   filter: 
@@ -105,11 +105,11 @@ img {
   user-select: none;
 }
 
-img:hover {
+.social-icon:hover {
   transform: scale(1.1, 1.1);
 }
 
-img:active {
+.social-icon:active {
   transform: scale(1.1, 1.1);
   filter: 
     hue-rotate(220deg)
@@ -181,13 +181,13 @@ textarea:valid+label {
 }
 
 @media only screen and (max-width: 800px) {
-  h2 {
+  .contact-heading {
     font-size: clamp(40px, 10vw, 60px);
   }
 }
 
 @media only screen and (max-width: 400px) {
-  h2 {
+  .contact-heading {
     font-size: clamp(30px, 12vw, 60px);
   }
   

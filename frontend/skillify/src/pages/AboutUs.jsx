@@ -4,17 +4,11 @@ import "../styles/aboutpage.css"
 
 const About = () => {
   return (
-<<<<<<< HEAD
-    <div>
-      AboutUs
-    </div>
-  )
-}
-=======
+
     <div className="p-8">
    
       <h2 className="text-3xl font-bold mb-4">About Skillify</h2>
->>>>>>> fd5290d6a3ea8063b42e22fb8d2d67fba419805f
+
 
       <div className="bg-gray-100 p-6 rounded-md mb-4">
         <h2 className="text-3xl font-bold mb-4">Our Story:</h2>
