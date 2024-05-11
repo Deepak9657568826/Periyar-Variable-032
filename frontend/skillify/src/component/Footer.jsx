@@ -1,5 +1,5 @@
 import React from 'react';
-
+import projectLogo from "../assets/projectLogo.jpg"
 function Footer() {
     return (
         <div className="footer_section">
@@ -18,13 +18,13 @@ function Footer() {
             <div className="subscriber_mid bg-blue-200 grid grid-cols-3 gap-4 p-4">
                 <div className="first_para col-span-1">
                     <div className="footer_logo">
-                        <h1>LOGO</h1>
+                    <img src={projectLogo} alt="Website Logo" className="h-8" />
                     </div>
                     <div className="footer_para">
                         <h3 id="footer_first_head" className="font-light">Start Your Journey Now</h3>
                         <br />
-                        <h5>Michael-Miller99@gmail.com</h5>
-                        <h5>www.Devlop-Security.com</h5>
+                        <h5>dwayzode@gmail.com</h5>
+                        <h5>www.skillify.com</h5>
                     </div>
                 </div>
                 <div className="middle_para col-span-1 grid grid-cols-2 gap-4">
@@ -55,7 +55,7 @@ function Footer() {
             {/* FOOTER LAST SECTION START */}
             <div className="subscriber_last bg-blue-500 grid grid-cols-3 gap-4 p-4 text-white">
                 <div className="footer_logo_last col-span-1 text-right">
-                    <h1>LOGO</h1>
+                <img src={projectLogo} alt="Website Logo" className="h-8" />
                 </div>
                 <div className="footer_last_mid_para col-span-2">
                     <p id="unleash" className="font-light">Unleash The Power Of Security And Development</p>
