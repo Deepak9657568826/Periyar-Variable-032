@@ -134,7 +134,7 @@ function Login() {
       <Button boxShadow='xl' p='6' rounded='md' bg='white'
         w={'full'}
         maxW={'md'}
-        onClick={loginWithGoogle}
+        // onClick={loginWithGoogle}
         leftIcon={<FcGoogle style={{ fontSize: "30px" }}/>}>
         <Center>
           <Text>Login with Google</Text>

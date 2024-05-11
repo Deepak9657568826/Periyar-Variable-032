@@ -36,13 +36,13 @@ const loginUser= async(req,res)=>{
            if(result) {
                 
                 const access_token=jwt.sign(
-                    {_id:user._id,email:user.email},
-                process.env.JWT_SECRET,
+                    {userId:user.userId,email,role:user.role},
+                "masai",
                 {expiresIn:"1h"}
             );
             const refresh_token=jwt.sign(
-                {_id:user._id,email:user.email},
-            process.env.JWT_SECRET,
+                {userId:user.userId,email,role:user.role},
+           "masai",
             {expiresIn:"1h"}
         );
                 return res.json({message:'user login successfully',accessToken:access_token,refreshToken:refresh_token})

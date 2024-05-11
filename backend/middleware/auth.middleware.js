@@ -11,12 +11,13 @@ const auth=async(req,res,next)=>{
     if(blackList){
        return res.status(401).json({msg:"user is already logout please login again"});
     }
-    jwt.verify(token,process.env.JWT_SECRET,(err,decoded)=>{
+    jwt.verify(token,"masai",(err,decoded)=>{
      if(err) throw new Error(err);
      if(decoded){
           req.userId=decoded.userId;
         
           req.role=decoded.role;
+          console.log(decoded.role);
           console.log("auth")
          next();
      }
