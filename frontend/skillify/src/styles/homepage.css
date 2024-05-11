@@ -1,0 +1,28 @@
+.Allteam {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 80%;
+    margin: auto;
+    padding-left: 7%;
+  }
+  
+  @media (max-width: 600px) {
+    .Allteam {
+  
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  
+  .css-nas1cv {
+    background-color: white !important;
+  }
+  
+  .homepageBox {
+    background-color: rgb(216, 216, 216);
+  }
+  
+  .homepageBox:hover {
+    transform: scale(1.07);
+    transition: all 0.4s linear;
+  }
