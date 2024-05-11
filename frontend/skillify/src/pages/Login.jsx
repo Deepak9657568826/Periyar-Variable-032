@@ -1,8 +1,10 @@
 import { Button, Center, Text } from '@chakra-ui/react';
 import React, { useState } from 'react';
+
 import { FcGoogle } from "react-icons/fc";
 import {  useNavigate } from 'react-router-dom'; // Import useHistory from react-router-dom
 import Swal from"sweetalert2"
+
 function Login() {
   const [name, setname] = useState('');
   const [password, setPassword] = useState('');
@@ -72,9 +74,11 @@ function Login() {
     }
   };
 
+
   // const loginWithGoogle = () => {
   //   window.open("http://localhost:6003/auth/google/callback", "_self");
   // };
+
 
   return (
     <div className="loginpage flex justify-center items-center h-screen">
@@ -130,6 +134,7 @@ function Login() {
               Login
             </button>
           </div>
+
           <Center mt={8} p={8}>
       <Button boxShadow='xl' p='6' rounded='md' bg='white'
         w={'full'}
@@ -141,6 +146,7 @@ function Login() {
         </Center>
       </Button>
     </Center>
+
         </form>
       </div>
     </div>

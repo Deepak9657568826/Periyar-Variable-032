@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 
 const userSchema = mongoose.Schema({
 
+
     googleId:String,
     userId:{type:Number,unique:true},
     name:{type:String,required:true},
@@ -12,11 +13,13 @@ const userSchema = mongoose.Schema({
         type:String,enum:["admin","user"],default:"user"
     }
 
+
 })
 
 const UserModel = mongoose.model('users',userSchema);
 
 module.exports={
 
-    UserModel,
+    UserModel
+
 }
