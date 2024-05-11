@@ -1,5 +1,6 @@
 const { UserModel } = require("../models/user.model");
 const bcrypt = require("bcrypt");
+
 require("dotenv").config();
 const jwt = require('jsonwebtoken');
 const { blacklistModel } = require("../models/blacklist.model");
@@ -24,10 +25,12 @@ const registerUser = async(req,res)=>{
          res.status(400).json({message:err.message});
      }
  }
+
 const loginUser= async(req,res)=>{
     const {email,password} = req.body;
     try{
         const user = await UserModel.findOne({email});
+
         if(!user){
             return res.status(401).send("user is not found try to login");
         }
@@ -75,4 +78,5 @@ module.exports={
     registerUser,
     loginUser,
     logoutUser
+
 }
