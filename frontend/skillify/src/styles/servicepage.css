@@ -30,9 +30,10 @@
     text-decoration: none;
   }
   
-  .card__image {      
+  .card__image {  
+    object-fit: cover;    
     width: 100%;
-    height: auto;
+    height: 250px;
   }
   
   .card__overlay {
