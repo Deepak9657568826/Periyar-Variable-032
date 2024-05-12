@@ -22,7 +22,7 @@ app.use("/", offerServicesRoute)
 
 app.listen(PORT, () => {
     try {
-        connectToDb(process.env.DB_URL);
+        connectToDb("mongodb+srv://adititlgt244:Uve4Ix0NGzbrUbUz@cluster0.mrhvjba.mongodb.net/skillify?retryWrites=true&w=majority&appName=Cluster0");
         console.log("we are connected to database");
         console.log(`Server is running at ${PORT}`);
     } catch (err) {

@@ -5,6 +5,7 @@ const connectToDb = async (url) => {
     await mongoose.connect(url)
 }
 
+
 module.exports = {
     connectToDb
 }

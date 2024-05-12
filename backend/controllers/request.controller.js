@@ -19,8 +19,6 @@ const { RequestModel } = require("../models/request.model");
     try {
       const request =await  RequestModel.find({})
       res.status(200).json({msg:"All requested", request})
-
-      
     } catch (error) {
       res.status(200).json({msg:error})
     }
