@@ -16,9 +16,9 @@ const ServiceDescription = () => {
 
   </div>
 </div>
-<div className=" shadow-md rounded bg-white-100 w-80 h-40 mx-auto  px-4 py-5">
+<div className=" shadow-md rounded bg-white w-80 h-40 mx-auto  px-4 py-5">
 
-<div className="">
+<div className="bg-white">
   <h3 className="text-lg font-bold">Erin Lindford</h3>
   <span>Product engineer</span>
   </div>
