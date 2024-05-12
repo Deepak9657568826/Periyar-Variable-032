@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import '../styles/servicepage.css';
 import { GrFavorite } from "react-icons/gr";
-import ServiceDescription from './ServiceDescription';
+
 
 function Services() {
   const [services, setServices] = useState([]);
@@ -32,7 +32,8 @@ function Services() {
         <ul className="cards">
           {services.map((service) => (
             <li key={service._id}>
-              <a href="#" className="card">
+
+            <a href="#" className="card">
                 <img src={service.backgroundPhoto} className="card__image" alt="" />
                 <h2 className="card__tagline"><GrFavorite color='white'  /></h2>
                 <div className="card__overlay">
@@ -51,7 +52,7 @@ function Services() {
           ))}
         </ul>
       </div>
-      <ServiceDescription />
+    
     </div>
   );
 }
