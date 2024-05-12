@@ -15,8 +15,7 @@ function App() {
   return (
     <div>
       <Navbar/>
-      {/* <AllRoutes/> */}
-      <PostYourService/>
+      <AllRoutes/>
       <Footer/>
     </div>
   )
