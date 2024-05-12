@@ -1,20 +1,37 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import projectLogo from "../assets/projectLogo.jpg"
+// import projectLogo from "../assets/projectLogo.jpg"
 import { AuthContext } from './AuthContext';
-
+import Swal from"sweetalert2"
 
 function Navbar(){
     const {isLoggedIn,setLoggedIn} = useContext(AuthContext);
     const handleLogout = ()=>{
         localStorage.removeItem("accessToken");
         setLoggedIn(false)
+        const Toast = Swal.mixin({
+            toast: true,
+            position: "top-end",
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+              toast.onmouseenter = Swal.stopTimer;
+              toast.onmouseleave = Swal.resumeTimer;
+            }
+          });
+          Toast.fire({
+            icon: "success",
+            title: "Logout successfully"
+          });
     }
     return (
         <div className="bg-gray-800 text-white py-4">
             <div className="container mx-auto flex justify-between items-center">
                 <Link to="/">
-                    <img src={projectLogo} alt="Website Logo" className="h-8" />
+                <h2 className="block mr-2 w-30 text-2xl font-serif font-bold">
+            Skillify
+        </h2>
                 </Link>
                 <div className="flex space-x-4">
                     <Link to="/" className="hover:text-gray-300">Home</Link>
