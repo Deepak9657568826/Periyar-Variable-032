@@ -81,7 +81,7 @@ function Login() {
 
 
   return (
-    <div className="loginpage flex justify-center items-center h-screen">
+    <div  style={{backgroundColor:"#6a9ac4"}}  className="loginpage flex justify-center items-center h-screen">
       <div className="flex-1 max-w-md px-4">
         <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
           <div className="text-center text-blue-700 text-2xl font-bold mb-4">

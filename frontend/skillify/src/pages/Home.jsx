@@ -5,7 +5,7 @@ import "../App.css";
 
 function HomePage() {
   return (
-    <>
+    <div style={{backgroundColor:"#6a9ac4"}}>
       <Box>
         <Box
           w={{ base: "100%", md: "90%" }}
@@ -20,7 +20,7 @@ function HomePage() {
             m={"auto"}
             mt={{ base: "2rem", md: "" }}
           >
-            <Image src="https://pbs.twimg.com/media/DbNHGmDXkAAIUoG.jpg" filter={"drop-shadow(0 0 0.75rem #088395)"} />
+            <Image src="https://static.vecteezy.com/system/resources/previews/009/292/408/non_2x/design-of-students-sitting-on-piles-of-books-studying-used-cloud-network-technology-access-technology-service-illustration-for-landing-page-website-poster-banner-mobile-apps-web-social-media-ads-etc-free-vector.jpg" filter={"drop-shadow(0 0 0.75rem #088395)"} />
           </Box>
           <Box
             w={{ base: "95%", md: "50%" }}
@@ -117,7 +117,7 @@ function HomePage() {
           </Flex>
         </Box>
       </Box>
-    </>
+    </div>
   );
 }
 
