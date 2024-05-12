@@ -14,7 +14,7 @@ function SignUp() {
   // };
   const handleSignUp = async () => {
     try {
-      const response = await fetch('https://gray-xerus-sock.cyclic.app/users/register', {
+      const response = await fetch('https://periyar-variable-032-nfcl.onrender.com/users/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

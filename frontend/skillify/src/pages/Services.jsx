@@ -5,7 +5,7 @@ import ServiceDescription from './ServiceDescription';
 
 function Services() {
   const [services, setServices] = useState([]);
-  const url = "https://gray-xerus-sock.cyclic.app/newServices";
+  const url = "https://periyar-variable-032-nfcl.onrender.com/newServices";
 
   function fetchData() {
     fetch(url)
