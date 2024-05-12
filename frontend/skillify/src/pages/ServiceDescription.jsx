@@ -2,7 +2,7 @@ import React from 'react'
 
 const ServiceDescription = () => {
   return (
-    <div className=' ml-20 flex'>
+    <div className=' m-10 flex'>
       <div className="p-10 bg-white  md:w-1/2">
   <h2>Title</h2>
   <div className="bg-white rounded-lg shadow-lg">

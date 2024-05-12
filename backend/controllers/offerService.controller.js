@@ -23,6 +23,25 @@ const getAllOfferServices = async (req, res) => {
     }
 };
 
+const getOneOfferServices = async (req, res) => {
+    const { id } = req.params; 
+    
+    try {
+        
+        const offerService = await OfferServiceModel.find({_id:id});
+        
+        if (!offerService) {
+            return res.status(404).json({ message: "Service not found" });
+        }
+
+        res.status(200).json({ message: "Service found", offerService });
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+};
+
+
+
 // Update operation
 const updateOfferService = async (req, res) => {
     const { id } = req.params;
@@ -55,5 +74,6 @@ module.exports = {
     createOfferService,
     getAllOfferServices,
     updateOfferService,
-    deleteOfferService
+    deleteOfferService,
+    getOneOfferServices
 };

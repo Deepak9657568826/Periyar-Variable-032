@@ -20,7 +20,6 @@ function AllRoutes() {
       <Route path="/signup" element={<SignUp />} />
       <Route path="/login" element={<Login />} />
       <Route path="/postyourservice" element={<PostYourService />} />
-
     </Routes>
   );
 }
