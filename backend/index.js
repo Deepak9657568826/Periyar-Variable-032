@@ -22,7 +22,7 @@ app.use("/", offerServicesRoute)
 
 app.listen(PORT, () => {
     try {
-        connectToDb("mongodb://127.0.0.1:27017/demo");
+        connectToDb(process.env.DB_URL);
         console.log("we are connected to database");
         console.log(`Server is running at ${PORT}`);
     } catch (err) {
