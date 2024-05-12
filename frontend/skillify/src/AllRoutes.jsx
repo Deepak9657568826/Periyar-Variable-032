@@ -8,6 +8,7 @@ import Login from './pages/Login';
 import Home from './pages/Home';
 import ContactUS from './pages/ContactUS';
 import PostYourService from './pages/PostYourService';
+import ServiceDescription from './pages/ServiceDescription';
 
 
 function AllRoutes() {
@@ -20,6 +21,7 @@ function AllRoutes() {
       <Route path="/signup" element={<SignUp />} />
       <Route path="/login" element={<Login />} />
       <Route path="/postyourservice" element={<PostYourService />} />
+      <Route path="/singleservice/:id" element={<ServiceDescription/>}/>
     </Routes>
   );
 }

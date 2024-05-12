@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import '../styles/servicepage.css';
 import { GrFavorite } from "react-icons/gr";
+import { Link } from 'react-router-dom';
+// import ServiceDescription from './ServiceDescription';
 
 
 function Services() {
@@ -31,7 +33,7 @@ function Services() {
       <div>
         <ul className="cards">
           {services.map((service) => (
-            <li key={service._id}>
+         <Link to={`/singleservice/${service._id}`} key={service._id}>  <li>
 
             <a href="#" className="card">
                 <img src={service.backgroundPhoto} className="card__image" alt="" />
@@ -49,9 +51,11 @@ function Services() {
                 </div>
               </a>
             </li>
+            </Link>
           ))}
         </ul>
       </div>
+    {/* <ServiceDescription/> */}
     
     </div>
   );
