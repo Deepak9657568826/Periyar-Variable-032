@@ -7,7 +7,6 @@ function Navbar(){
     return (
         <div className="bg-gray-800 text-white py-4">
             <div className="container mx-auto flex justify-between items-center">
-                {/* Replace "Home" text with your website logo */}
                 <Link to="/">
                     <img src={projectLogo} alt="Website Logo" className="h-8" />
                 </Link>

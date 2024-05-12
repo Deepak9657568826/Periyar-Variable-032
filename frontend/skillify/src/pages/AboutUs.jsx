@@ -5,7 +5,7 @@ import "../styles/aboutpage.css"
 const About = () => {
   return (
 
-    <div className="p-8">
+    <div className="p-8"  style={{    backgroundColor: "rgb(106, 154, 196)"}}>
    
       <h2 className="text-3xl font-bold mb-4">About Skillify</h2>
 

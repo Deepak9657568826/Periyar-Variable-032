@@ -12,8 +12,6 @@ userRouter.post("/register",registerUser)
 
 userRouter.post("/login",loginUser)
 
-
-
 userRouter.post("/logout",auth,logoutUser);
 
 userRouter.get("/",auth,access("user"),async(req,res)=>{
