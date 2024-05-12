@@ -14,7 +14,7 @@ function SignUp() {
   // };
   const handleSignUp = async () => {
     try {
-      const response = await fetch('http://localhost:6003/users/register', {
+      const response = await fetch('https://gray-xerus-sock.cyclic.app/users/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -64,7 +64,7 @@ function SignUp() {
           </div>
           <div className="mb-4">
             <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
-              Fullname
+              {/* Fullname */}
             </label>
             <input
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -72,13 +72,12 @@ function SignUp() {
               type="text"
               placeholder="Enter fullname"
               value={name}
-              onChange={(e) => setname(e.target.value)}
-            />
+              onChange={(e) => setname(e.target.value)}/>
           </div>
 
           <div className="mb-4">
             <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
-              Email
+              {/* Email */}
             </label>
             <input
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -92,7 +91,7 @@ function SignUp() {
 
           <div className="mb-6">
             <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="password">
-              Password
+              {/* Password */}
             </label>
             <input
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"

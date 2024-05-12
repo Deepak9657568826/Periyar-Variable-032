@@ -13,7 +13,7 @@ function Login() {
 
   const handleLogin = async () => {
     try {
-      const response = await fetch('http://localhost:6003/users/login', {
+      const response = await fetch('https://gray-xerus-sock.cyclic.app/users/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -89,20 +89,20 @@ function Login() {
           </div>
           <div className="mb-4">
             <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
-              name
+              {/* email */}
             </label>
             <input
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               id="name"
-              type="text"
-              placeholder="Enter name"
+              type="email"
+              placeholder="Enter email"
               value={name}
               onChange={(e) => setname(e.target.value)}
             />
           </div>
           <div className="mb-6">
             <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="password">
-              Password
+              {/* Password */}
             </label>
             <input
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -114,7 +114,7 @@ function Login() {
             />
           </div>
           <div className="mb-6">
-            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="rememberMe">
+            {/* <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="rememberMe">
               <input
                 className="mr-2 leading-tight"
                 type="checkbox"
@@ -123,7 +123,7 @@ function Login() {
                 onChange={() => setRememberMe(!rememberMe)}
               />
               <span className="text-sm">Remember me</span>
-            </label>
+            </label> */}
           </div>
           <div className="flex items-center justify-center">
             <button
