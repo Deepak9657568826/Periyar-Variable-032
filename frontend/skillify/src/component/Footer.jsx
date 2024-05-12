@@ -7,10 +7,7 @@ function Footer() {
             {/* FOOTER TOP SECTION START */}
             <div className="subscriber_head bg-blue-500 grid grid-cols-2 gap-4 p-4 text-white">
                 <h1 id="free_daily_updates" className="col-span-1 text-right">Free Daily Updates</h1>
-                <form action="" className="subscriber_search_box col-span-1 flex" method="get">
-                    <input className="subscriber_search_bar flex-1 bg-gray-200 px-4 py-2 rounded-l-full" type="text" placeholder="Search for datasets, APIs" />
-                    <button className="subscriber_button bg-green-500 px-4 py-2 rounded-r-full" type="submit">Subscribe</button>
-                </form>
+               
             </div>
             {/* FOOTER TOP SECTION ENDS */}
 
