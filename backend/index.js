@@ -1,16 +1,31 @@
-const express = require("express")
+require("dotenv").config();
+const express = require("express");
 
 const app = express();
-app.use(express.json())
+const cors = require("cors");
+require("./db/conn");
+const PORT = 8080;
 
+const { userRouter } = require("./routes/user.route");
+const { connectToDb } = require("./db/conn");
+const { requestRouter } = require("./routes/request.routes");
+const { offerServicesRoute } = require("./routes/offerServices.routes");
 
-app.get("/", (req, res)=>{
-    res.send("This is home page")
-})
+app.use(cors());
 
+app.use(express.json());
+app.use('/users', userRouter);
 
-const PORT = process.env.PORT || 1234
+app.use("/request", requestRouter)
 
-app.listen(PORT, ()=>{
-    console.log(`Server is runing at port ${PORT}` );
+app.use("/", offerServicesRoute)
+
+app.listen(PORT, () => {
+    try {
+        connectToDb("mongodb+srv://adititlgt244:Uve4Ix0NGzbrUbUz@cluster0.mrhvjba.mongodb.net/skillify?retryWrites=true&w=majority&appName=Cluster0");
+        console.log("we are connected to database");
+        console.log(`Server is running at ${PORT}`);
+    } catch (err) {
+        console.log(err.message);
+    }
 })
