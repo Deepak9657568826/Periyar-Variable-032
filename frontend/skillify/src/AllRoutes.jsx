@@ -7,6 +7,7 @@ import SignUp from './pages/SignUp';
 import Login from './pages/Login';
 import Home from './pages/Home';
 import ContactUS from './pages/ContactUS';
+import PostYourService from './pages/PostYourService';
 
 
 function AllRoutes() {
@@ -18,6 +19,8 @@ function AllRoutes() {
       <Route path="/services" element={<Services />} />
       <Route path="/signup" element={<SignUp />} />
       <Route path="/login" element={<Login />} />
+      <Route path="/postyourservice" element={<PostYourService />} />
+
     </Routes>
   );
 }
