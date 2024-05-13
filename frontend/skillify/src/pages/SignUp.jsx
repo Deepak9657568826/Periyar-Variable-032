@@ -1,14 +1,14 @@
 import { Button, Center, Text } from '@chakra-ui/react';
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { FcGoogle } from 'react-icons/fc';
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2'; 
+import { AuthContext } from '../component/AuthContext';
 function SignUp() {
   const [name, setname] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
-
   // const loginWithGoogle = () => {
   //   window.open("http://localhost:6003/auth/google/callback", "_self");
   // };
@@ -23,7 +23,7 @@ function SignUp() {
       });
 
       if (response.ok) {
-        
+       
         
         setTimeout(()=>{
           
@@ -57,8 +57,8 @@ function SignUp() {
   return (
     <div style={{backgroundColor:"#6a9ac4"}} className="loginpage flex justify-center items-center h-screen">
     
-      <div className="flex-1 max-w-md px-4">
-        <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+      <div style={{backgroundColor:"#ffffff8f"}} className=" rounded-md flex-1 max-w-md px-4 py-4">
+        <form style={{backgroundColor:"#ffffff8f"}} className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
         <div className="text-center text-blue-700 text-2xl font-bold mb-4">
             <h1>Register to Skillify</h1>
           </div>
@@ -72,7 +72,8 @@ function SignUp() {
               type="text"
               placeholder="Enter fullname"
               value={name}
-              onChange={(e) => setname(e.target.value)}/>
+              onChange={(e) => setname(e.target.value)}
+              required/>
           </div>
 
           <div className="mb-4">
@@ -86,6 +87,7 @@ function SignUp() {
               placeholder="Enter email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              required
             />
           </div>
 
@@ -100,6 +102,7 @@ function SignUp() {
               placeholder="Enter password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+              required
             />
           </div>
          

@@ -1,17 +1,19 @@
 import { Button, Center, Text } from '@chakra-ui/react';
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 
 import { FcGoogle } from "react-icons/fc";
 import {  useNavigate } from 'react-router-dom'; // Import useHistory from react-router-dom
 import Swal from"sweetalert2"
+import { AuthContext } from '../component/AuthContext';
 
 function Login() {
   const [name, setname] = useState('');
   const [password, setPassword] = useState('');
-  const [rememberMe, setRememberMe] = useState(false);
-  const navigate = useNavigate(); // Initialize useHistory hook
+  // const [rememberMe, setRememberMe] = useState(false);
+  const navigate = useNavigate(); 
+ const {setLoggedIn} = useContext(AuthContext);
 
-  const handleLogin = async () => {
+  const handleLoginClick = async () => {
     try {
       const response = await fetch('https://periyar-variable-032-nfcl.onrender.com/users/login', {
         method: 'POST',
@@ -24,14 +26,17 @@ function Login() {
       const data = await response.json();
 
       if (response.ok) {
-        // Login successful, save tokens to localStorage if rememberMe is checked
-        if (rememberMe) {
+        // if (rememberMe) {
+        //   localStorage.setItem('accessToken', data.accessToken);
+        //   localStorage.setItem('refreshToken', data.refreshToken);
+        // } else {
+          setLoggedIn({
+            isAuth:true,
+            token:data.accessToken
+          })
           localStorage.setItem('accessToken', data.accessToken);
           localStorage.setItem('refreshToken', data.refreshToken);
-        } else {
-          sessionStorage.setItem('accessToken', data.accessToken);
-          sessionStorage.setItem('refreshToken', data.refreshToken);
-        }
+        // }
         setTimeout(()=>{
           
           navigate("/");
@@ -70,7 +75,7 @@ function Login() {
       }
     } catch (error) {
       console.error('Error logging in:', error);
-      alert('An error occurred. Please try again later.');
+     
     }
   };
 
@@ -79,11 +84,11 @@ function Login() {
   //   window.open("http://localhost:6003/auth/google/callback", "_self");
   // };
 
-
+  
   return (
-    <div  style={{backgroundColor:"#6a9ac4"}}  className="loginpage flex justify-center items-center h-screen">
-      <div className="flex-1 max-w-md px-4">
-        <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+    <div  style={{backgroundColor:"#6a9ac4"}}  className=" loginpage flex justify-center items-center h-screen">
+      <div className="flex-1 max-w-md px-4 py-4 rounded-md " style={{backgroundColor:"#ffffff8f"}}  >
+        <form style={{backgroundColor:"#ffffff8f"}} className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
           <div className="text-center text-blue-700 text-2xl font-bold mb-4">
             <h1>Login to Skillify</h1>
           </div>
@@ -98,6 +103,7 @@ function Login() {
               placeholder="Enter email"
               value={name}
               onChange={(e) => setname(e.target.value)}
+              required
             />
           </div>
           <div className="mb-6">
@@ -111,6 +117,7 @@ function Login() {
               placeholder="Enter password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+              required
             />
           </div>
           <div className="mb-6">
@@ -129,7 +136,7 @@ function Login() {
             <button
               className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
               type="button"
-              onClick={handleLogin}
+              onClick={handleLoginClick}
             >
               Login
             </button>

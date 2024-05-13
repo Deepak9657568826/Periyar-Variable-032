@@ -1,11 +1,78 @@
-import React from 'react'
+import { useState } from "react";
+import { createContext } from "react";
+import axios from "axios";
+ 
+  const userRes={
+    isAuth:false,
+    token:""
+  }
+export const AuthContext =createContext();
+// eslint-disable-next-line react/prop-types
+export const AuthContextProvider=({children})=>{
+      const [isLoggedIn, setLoggedIn] = useState(userRes);
+   
+      const handleLogin = async({ email, password }) => {
+         // eslint-disable-next-line no-async-promise-executor
+         return new Promise(async(resolve,reject)=>{
+            try {
+                console.log(email,
+                  password)
+                const res = await axios.post("https://periyar-variable-032-nfcl.onrender.com/users/login", {
+                  email,
+                  password,
+                });
+                // setAuth(res.data.isAuth);
+                if(res){
+                  setLoggedIn({
+                    isAuth:true,
+                    token:res.data.accessToken
+                  })
+                }
+                console.log(res.data.accessToken)
+                localStorage.setItem("accessToken",res.data.accessToken);
+                resolve();
+              } catch (error) {
+                console.log(error);
+                reject();
+              }
+            
+         })
+         
+      };
 
-const AuthContext = () => {
-  return (
-    <div>
-      
-    </div>
-  )
+
+      console.log(isLoggedIn);
+      // const handleSignup = async (obj) => {
+      //     try {
+      //       const res = await axios.post("https://periyar-variable-032-nfcl.onrender.com/users/register", obj);
+      //       console.log(res.data);
+      //     } catch (error) {
+      //       console.log(error);
+      //     }
+      // };
+     
+      const handleLogout = async () => {
+        try {
+          const token = localStorage.getItem("accessToken");
+          const res = await axios.get("http://localhost:8080/users/logout", {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          });
+          console.log(res);
+          setLoggedIn(userRes);
+          localStorage.removeItem("accessToken");
+        } catch (error) {
+          console.log(error);
+        }
+      };
+   
+   
+   
+   
+    return(
+        <AuthContext.Provider value={{handleLogin,handleLogout,isLoggedIn,setLoggedIn}}>
+             {children}
+        </AuthContext.Provider>
+    )
 }
-
-export default AuthContext

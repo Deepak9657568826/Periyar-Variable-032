@@ -1,5 +1,5 @@
 const express = require("express")
-const { createOfferService, getAllOfferServices, updateOfferService, deleteOfferService } = require("../controllers/offerService.controller")
+const { createOfferService, getAllOfferServices, updateOfferService, deleteOfferService, getOneOfferServices } = require("../controllers/offerService.controller")
 
 const offerServicesRoute = express.Router()
 
@@ -9,6 +9,7 @@ offerServicesRoute.post("/newServices", createOfferService)
 // get all offer service
 offerServicesRoute.get("/newServices", getAllOfferServices)
 
+offerServicesRoute.get("/oneServices/:id", getOneOfferServices)
 // to update the services
 offerServicesRoute.patch("/newServices/:id", updateOfferService)
 

@@ -32,8 +32,9 @@ function Services() {
       <div>
         <ul className="cards">
           {services.map((service) => (
-            <li key={service._id}>
-              <a href="#" className="card">
+         <Link to={`/singleservice/${service._id}`} key={service._id}>  <li>
+
+            <a href="#" className="card">
                 <img src={service.backgroundPhoto} className="card__image" alt="" />
                 <h2 className="card__tagline"><GrFavorite color='white'  /></h2>
                 <div className="card__overlay">
@@ -49,6 +50,7 @@ function Services() {
                 </div>
               </a>
             </li>
+            </Link>
           ))}
         </ul>
       </div>
