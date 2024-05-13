@@ -11,7 +11,7 @@ import {
 } from "@chakra-ui/react";
 import "../styles/postservices.css"
 function PostYourService() {
-  const url = "https://gray-xerus-sock.cyclic.app/request/newrequest"
+  const url = "https://periyar-variable-032-nfcl.onrender.com/request/newrequest"
 
 
 
@@ -25,29 +25,35 @@ function PostYourService() {
   const handleSubmit = (event) => {
     event.preventDefault();
     const formData = {
-     userName:username,
-     categories:category,
-     description:description,
-     image:image,
-     willingToPay:price,
-     virtuallyOrNot:virtual
+     userName: username,
+     categories: category,
+     description: description,
+     image: image,
+     willingToPay: price,
+     virtuallyOrNot: virtual
     };
-    // console.log(formData);
-    // Handle form submission here
+    
     fetch(url, {
       method: "POST",
       headers: {
-        " Content-type": "aplication/json"
+        "Content-type": "application/json"
       },
       body: JSON.stringify(formData)
     })
       .then(res => res.json())
       .then((data) => {
         console.log(data);
+        // Clear the form fields after successful submission
+        setUsername('');
+        setCategory('');
+        setDescription('');
+        setImage('');
+        setPrice('');
+        setVirtual('yes');
       })
       .catch(error => {
         console.log(error);
-      })
+      });
   };
 
   return (
