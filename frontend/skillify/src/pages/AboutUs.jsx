@@ -5,7 +5,7 @@ import "../styles/aboutpage.css"
 const About = () => {
   return (
 
-    <div className="p-8"  style={{    backgroundColor: "rgb(106, 154, 196)"}}>
+    <div className="p-8"  style={{ backgroundColor: "rgb(106, 154, 196)"}}>
    
       <h2 className="text-3xl font-bold mb-4">About Skillify</h2>
 
@@ -23,10 +23,11 @@ const About = () => {
           <div className="max-w-sm">
             <img
               className="w-full h-72 object-cover rounded-lg"
-              src={deepakphoto}
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwUuyt3NZjTdLCTDPO-ArfcX5sBFWftaQUR2OUzIappw&s"
               alt="rpic"
             />
             <div className="mt-6">
+            <h3 className="text-lg font-bold fullstackname">Aditi Dhiman</h3>
               <h3 className="text-lg font-bold fullstackname">Full Stack Developer</h3>
               <p></p>
             </div>
@@ -34,10 +35,12 @@ const About = () => {
           <div className="max-w-sm">
             <img
               className="w-full h-72 object-cover rounded-lg"
-              src={deepakphoto}
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI-mC9T7V9IkyIz4gw0WBXfYJbumTGPWQeaWE7Ul1zUA&s"
               alt="rpic"
             />
             <div className="mt-6">
+            <h3 className="text-lg font-bold fullstackname"></h3>
+            <h3 className="text-lg font-bold fullstackname">Revanth Amamu</h3>
               <h3 className="text-lg font-bold fullstackname">Full Stack Developer</h3>
               <p></p>
             </div>
@@ -45,10 +48,11 @@ const About = () => {
           <div className="max-w-sm">
             <img
               className="w-full h-72 object-cover rounded-lg"
-              src={deepakphoto}
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI-mC9T7V9IkyIz4gw0WBXfYJbumTGPWQeaWE7Ul1zUA&s"
               alt="rpic"
             />
             <div className="mt-6">
+            <h3 className="text-lg font-bold fullstackname">Deepak wayzode</h3>
               <h3 className="text-lg font-bold fullstackname">Full Stack Developer</h3>
               <p></p>
             </div>

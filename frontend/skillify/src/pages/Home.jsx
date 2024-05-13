@@ -119,7 +119,7 @@ function HomePage() {
         </Box>
       </Box>
       <Box>
-      <CommunityRequest/>
+      {/* <CommunityRequest/> */}
       </Box>
     </div>
   );
