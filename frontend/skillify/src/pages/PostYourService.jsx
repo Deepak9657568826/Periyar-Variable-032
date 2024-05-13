@@ -44,12 +44,14 @@ function PostYourService() {
       .then((data) => {
         console.log(data);
         // Clear the form fields after successful submission
+        alert("Service request post successfull")
         setUsername('');
         setCategory('');
         setDescription('');
         setImage('');
         setPrice('');
         setVirtual('yes');
+
       })
       .catch(error => {
         console.log(error);

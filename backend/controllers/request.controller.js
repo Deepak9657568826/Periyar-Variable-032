@@ -24,7 +24,18 @@ const getAllrequest = async (req, res) => {
   }
 }
 
+const deleteRequest = async (req, res) => {
+  const {id} = req.params
+  try {
+    const request = await RequestModel.findByIdAndDelete({_id:id})
+    res.status(200).json({ msg: "Delete request  has been successfully done" })
+  } catch (error) {
+    res.status(200).json({ msg: error })
+  }
+}
+
 module.exports = {
   newRequest,
-  getAllrequest
+  getAllrequest,
+  deleteRequest
 }

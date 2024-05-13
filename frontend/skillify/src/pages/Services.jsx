@@ -58,9 +58,9 @@ function Services() {
         </ul>
       </div>
       {/* <button style={{backgroundColor:"red"}}>If you want to offer any service please click here</button> */}
-     <Link to="/postyourservice">
+     {/* <Link to="/postyourservice">
       <Button colorScheme='blue'>If you want to offer any service please click here</Button>
-      </Link>
+      </Link> */}
       {/* <ServiceDescription /> */}
     </div>
   );

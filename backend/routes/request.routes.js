@@ -1,5 +1,5 @@
 const express  = require("express");
-const { newRequest, getAllrequest } = require("../controllers/request.controller");
+const { newRequest, getAllrequest, deleteRequest } = require("../controllers/request.controller");
 
 const requestRouter = express.Router();
 
@@ -8,6 +8,9 @@ requestRouter.post("/newRequest", newRequest)
 
 // routes for get all request
 requestRouter.get("/allRequest", getAllrequest)
+
+
+requestRouter.delete("/deleteRequest/:id", deleteRequest)
 
 
 module.exports ={
