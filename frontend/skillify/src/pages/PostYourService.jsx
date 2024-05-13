@@ -51,7 +51,7 @@ function PostYourService() {
   };
 
   return (
-    <Box className='postYourservices' style={{ backgroundColor: "#6a9ac4" }} display="flex" justifyContent="center" alignItems="center" h="90vh" mt={0}>
+    <Box className='postYourservices m-20' style={{ backgroundColor: "#6a9ac4" }} display="flex" justifyContent="center" alignItems="center" h="90vh" mt={0}>
       <Box style={{ backgroundColor: "white" }} p={8} shadow="md" borderWidth="1px" borderRadius="md">
         <form onSubmit={handleSubmit}>
           <Stack spacing={0}>

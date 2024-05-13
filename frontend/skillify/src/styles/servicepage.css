@@ -81,7 +81,9 @@
   .card:hover .card__header {
     transform: translateY(0);
   }
-  
+  .card .card_header {
+    padding: 20px;
+  }
   .card__thumb {
     flex-shrink: 0;
     width: 50px;
@@ -111,7 +113,7 @@
   .card__description {
     padding: 0 2em 2em;
     margin: 0;
-    color: #D7BDCA;
+    color: black;
     font-family: "MockFlowFont";   
     display: -webkit-box;
     -webkit-box-orient: vertical;

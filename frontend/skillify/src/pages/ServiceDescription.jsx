@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import CommunityRequest from './CommunityRequest';
 // eslint-disable-next-line react/prop-types
 const ServiceDescription = () => {
   const [service, setService] = useState([]);
@@ -51,18 +52,7 @@ const ServiceDescription = () => {
      </div>
    </div>
  </div>
- {/* <div className=" shadow-md rounded bg-white w-80 h-40 mx-auto px-4 py-5">
-   <div className="bg-white">
-     <h3 className="text-lg font-bold">Interested? </h3>
-     <span>Introduce yourself to {service.nameOfUser} and describe what you’re looking for.</span>
-   </div>
-   <button
-     className="bg-blue-500 w-full hover:bg-blue-700 text-white font-bold mt-4 py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-     type="button"
-   >
-     Start a Conversation
-   </button>
- </div> */}
+
   <div style={{height:"400px",width:"500px"}}className="max-w-xs rounded-2xl  border bg-white p-10 text-center shadow-lg">
     <img className="mx-auto mb-4 h-32 w-32 rounded-full shadow-lg" src={service.profilePhoto} alt="profile picture" />
     <h1 className="text-2xl font-semibold text-slate-800">{service.nameOfUser}</h1>
@@ -80,6 +70,7 @@ const ServiceDescription = () => {
 </div>
 
    ))}
+   <CommunityRequest/>
    </>
   );
 }

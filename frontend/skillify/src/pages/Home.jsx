@@ -2,6 +2,7 @@ import { Box, Button, Flex, Heading, Image, Text } from "@chakra-ui/react";
 import deepakphoto from "../assets/deepakphoto.jpg";
 import { Link } from "react-router-dom";
 import "../App.css";
+import CommunityRequest from "./CommunityRequest";
 
 function HomePage() {
   return (
@@ -116,6 +117,9 @@ function HomePage() {
             </Box>
           </Flex>
         </Box>
+      </Box>
+      <Box>
+      <CommunityRequest/>
       </Box>
     </div>
   );
