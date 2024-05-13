@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import '../styles/servicepage.css';
 import { GrFavorite } from "react-icons/gr";
+import ServiceDescription from './ServiceDescription';
+import { Button, ButtonGroup } from '@chakra-ui/react'
 import { Link } from 'react-router-dom';
-// import ServiceDescription from './ServiceDescription';
+
 
 
 function Services() {
@@ -55,8 +57,11 @@ function Services() {
           ))}
         </ul>
       </div>
-    {/* <ServiceDescription/> */}
-    
+      {/* <button style={{backgroundColor:"red"}}>If you want to offer any service please click here</button> */}
+     <Link to="/postyourservice">
+      <Button colorScheme='blue'>If you want to offer any service please click here</Button>
+      </Link>
+      {/* <ServiceDescription /> */}
     </div>
   );
 }
