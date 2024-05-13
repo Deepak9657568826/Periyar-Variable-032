@@ -8,8 +8,11 @@ import { Link } from 'react-router-dom';
 
 
 function Services() {
+
   const [services, setServices] = useState([]);
+
   const url = "https://periyar-variable-032-nfcl.onrender.com/newServices";
+  
 
   function fetchData() {
     fetch(url)
@@ -26,6 +29,8 @@ function Services() {
   useEffect(() => {
     fetchData();
   }, []);
+
+
 
   return (
     <div>
