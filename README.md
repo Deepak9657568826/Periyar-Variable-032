@@ -1,4 +1,4 @@
-## Periyar-Variable-032
+## Skillify (Periyar-Variable-032)
 
 ## Introduction
 
@@ -21,8 +21,23 @@ Skillify is a web application inspired by taskrabbit, designed to connect people
 
 # Directory Structure
 
-+---backend
-|  |  \---controllers
+```
+Periyar-Variable-032/
+├─ backend/
+|  |-- controllers/
+│  ├─ db/
+│  ├─ middlewares/
+│  ├─ models/
+│  └─ routes/
+└─ frontend/
+|   |_skillify/
+|     └─ src/
+|        ├─ assets/
+|        ├─ components/
+|        |─ pages/
+|        |_ styles/
+|_ Readme.md
+```
 
 ## Video Walkthrough of the project
 
@@ -61,5 +76,25 @@ https://drive.google.com/file/d/1LHWyARNFBOYV0VMTWuuaI7ce2-6tX-xq/view?usp=shari
 - **Database:** The backend can utilize a mongodb database to store request data and user information.
 
 ## Installation & Getting started
+To run the project locally, follow these steps:
 
+```bash
+`git clone https://github.com/Deepak9657568826/Periyar-Variable-032.git`
+`cd Periyar-Variable-032`
+`npm install`
+`cd backend`
+`npm run server`
+`cd ../frontend/skillify`
+`npm run dev`
+```
+
+## Technology Stack
+List and provide a brief overview of the technologies used in the project.
+
+- Node.js
+- Express.js
+- MongoDB
+- Vite (React JS)
+- TailwindCSS
+- ChakraUI
 
