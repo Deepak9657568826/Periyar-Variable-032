@@ -8,8 +8,11 @@ import { Link } from 'react-router-dom';
 
 
 function Services() {
+
   const [services, setServices] = useState([]);
+
   const url = "https://periyar-variable-032-nfcl.onrender.com/newServices";
+  
 
   function fetchData() {
     fetch(url)
@@ -26,6 +29,8 @@ function Services() {
   useEffect(() => {
     fetchData();
   }, []);
+
+
 
   return (
     <div>
@@ -58,9 +63,9 @@ function Services() {
         </ul>
       </div>
       {/* <button style={{backgroundColor:"red"}}>If you want to offer any service please click here</button> */}
-     <Link to="/postyourservice">
+     {/* <Link to="/postyourservice">
       <Button colorScheme='blue'>If you want to offer any service please click here</Button>
-      </Link>
+      </Link> */}
       {/* <ServiceDescription /> */}
     </div>
   );
