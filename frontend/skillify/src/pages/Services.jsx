@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import '../styles/servicepage.css';
 import { GrFavorite } from "react-icons/gr";
 import ServiceDescription from './ServiceDescription';
 import { Button, ButtonGroup } from '@chakra-ui/react'
 import { Link } from 'react-router-dom';
+import CommunityRequest from './CommunityRequest';
+import { AuthContext } from '../component/AuthContext';
 
 
 
@@ -12,7 +14,7 @@ function Services() {
   const [services, setServices] = useState([]);
 
   const url = "https://periyar-variable-032-nfcl.onrender.com/newServices";
-  
+  const {isLoggedIn,setLoggedIn} = useContext(AuthContext);
 
   function fetchData() {
     fetch(url)
@@ -51,6 +53,7 @@ function Services() {
                     <img className="card__thumb" src={service.profilePhoto} alt="" />
                     <div className="card__header-text">
                       <h3 className="card__title">{service.nameOfUser}</h3>
+                      <h2>{service.categoriesOfHelp}</h2>
                       <span className="card__status">{service.timeAvailable}</span>
                     </div>
                   </div>
@@ -66,7 +69,8 @@ function Services() {
      {/* <Link to="/postyourservice">
       <Button colorScheme='blue'>If you want to offer any service please click here</Button>
       </Link> */}
-      {/* <ServiceDescription /> */}
+  {isLoggedIn.isAuth&&  <CommunityRequest/>}
+        
     </div>
   );
 }
