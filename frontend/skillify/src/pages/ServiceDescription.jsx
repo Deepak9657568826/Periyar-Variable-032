@@ -48,6 +48,7 @@ const ServiceDescription = () => {
          <span>{service.timeAvailable}</span>
          <br/>
          <span>{service.timePreference}</span>
+         <h2>Contact Number : <span style={{fontWeight:"bold"}}>09857458562</span> </h2>
        </div>
      </div>
    </div>

@@ -22,6 +22,26 @@ const CommunityRequest = () => {
   useEffect(() => {
     fetchData();
   }, []);
+
+  const handleDelete = (id) => {
+    fetch(`https://periyar-variable-032-nfcl.onrender.com/request/deleteRequest/${id}`, {
+      method: 'DELETE',
+    })
+      .then(res => res.json())
+      .then(data => {
+        console.log(data); // Log success message or handle response accordingly
+        // Update state to remove the deleted request
+        setRequest(request.filter(request => request._id !== id));
+      })
+      .catch(error => {
+        console.error('Error deleting request:', error);
+      });
+  };
+
+
+
+
+
   return (
     <div>
       <div>
@@ -40,13 +60,20 @@ const CommunityRequest = () => {
                     <img className="card__thumb" src={request.image} alt="" />
                     <div className="card__header-text">
                       <h3 className="card__title">{request.userName}</h3>
-                      <span  style={{color:"black", fontSize:"18px"}} className="card__status">Required help in : {request.categories}</span>
+                      <span style={{ color: "black", fontSize: "18px" }} className="card__status">Required help in : {request.categories}</span>
 
                     </div>
                   </div>
                   <p className="card__description text-black">{request.description}</p>
+                  <button
+                    className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded"
+                    onClick={() => handleDelete(request._id)}
+                  >
+                    Delete
+                  </button>
                 </div>
               </a>
+
             </li>
 
           ))}
