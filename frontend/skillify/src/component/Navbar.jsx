@@ -5,6 +5,7 @@ import Swal from "sweetalert2";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  
   const { isLoggedIn, setLoggedIn } = useContext(AuthContext);
 
   const toggleMenu = () => {
