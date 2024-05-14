@@ -1,4 +1,4 @@
-## Skillify (Periyar-Variable-032)
+![Screenshot 2024-05-14 132438](https://github.com/Deepak9657568826/Periyar-Variable-032/assets/147689631/a25263a2-b2d9-42ca-9ce8-d1873f934c57)## Skillify (Periyar-Variable-032)
 
 ## Introduction
 
@@ -94,7 +94,33 @@ List and provide a brief overview of the technologies used in the project.
 - Node.js
 - Express.js
 - MongoDB
+
 - Vite (React JS)
 - TailwindCSS
 - ChakraUI
+
+_Actual Website image
+## HOME PAGE
+![Screenshot 2024-05-14 132438](https://github.com/Deepak9657568826/Periyar-Variable-032/assets/147689631/02c92744-32b3-4b44-88d0-5e3b8ac43377)
+
+## ABOUT US PAGE
+![Screenshot 2024-05-14 132453](https://github.com/Deepak9657568826/Periyar-Variable-032/assets/147689631/2edee588-a233-460b-bce6-b184b91c94f3)
+
+## CONTACT US PAGE
+![Screenshot 2024-05-14 132458](https://github.com/Deepak9657568826/Periyar-Variable-032/assets/147689631/58eb8521-054e-43b2-abcb-b9db92c50907)
+
+## SERVICES PAGE
+![Screenshot 2024-05-14 132511](https://github.com/Deepak9657568826/Periyar-Variable-032/assets/147689631/01bb0073-ba85-4bbc-8e82-808c4c02e9f1)
+
+## SIGNUP PAGE
+![Screenshot 2024-05-14 132517](https://github.com/Deepak9657568826/Periyar-Variable-032/assets/147689631/542e0858-9ad1-45e1-8710-b845a84a7f9f)
+
+## LOGIN PAGE
+![Screenshot 2024-05-14 132522](https://github.com/Deepak9657568826/Periyar-Variable-032/assets/147689631/62dc3a01-3596-4154-a7b5-df794078c163)
+
+
+
+
+
+
 
